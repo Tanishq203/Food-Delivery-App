@@ -8,14 +8,13 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
- server: {
+  server: {
     proxy: {
       "/api": {
-        target:
-          "https://www.swiggy.com",
+        target: "https://www.swiggy.com/dapi",
         changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api/, ""),
+        rewrite: (path) => path.replace(/^\/api/, ""), 
       },
     },
-  }
+  },
 });
