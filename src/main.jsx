@@ -6,7 +6,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Offers from './components/Offers'
 import Help from './components/Help'
 import SignUp from './components/SignUp'
-import Body from './components/body'
+import Body from "./components/Body";
 import Error from './components/Error'
 import RestaurantMenu from './components/RestaurantMenu'
 import { Provider } from 'react-redux'
