@@ -12,7 +12,7 @@ function RestaurantMenu() {
 
     useEffect(()=>{
         async function calling(){
-            let API = `https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=18.52110&lng=73.85020&restaurantId=${id}&catalog_qa=undefined&submitAction=ENTER`
+            let API = `/api/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=18.52110&lng=73.85020&restaurantId=${id}&catalog_qa=undefined&submitAction=ENTER`;
             let resp = await axios.get(API)
             console.log(resp.data.data.cards[4].groupedCard.cardGroupMap.REGULAR.cards[2].card.card.itemCards);
             setFoodItemDetails(resp.data.data.cards[4].groupedCard.cardGroupMap.REGULAR.cards[2].card.card.itemCards)
