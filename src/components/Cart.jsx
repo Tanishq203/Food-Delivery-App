@@ -23,7 +23,7 @@ function Cart() {
         <h1 className='text-2xl font-bold m-2' >Cart Items</h1>
       <div className="flex justify-center items-center "> <button
   onClick={() => clearCartHandler()}
-  className="inline-flex items-center gap-2 h-7 px-3 rounded-full dark:bg-gray-900 text-white text-sm font-medium hover:bg-black transition self-center"
+  className="inline-flex items-center gap-2 h-7 px-3 rounded-full bg-gray-900 text-white text-sm font-medium hover:bg-black transition self-center"
 >
   Clear Cart
 </button>
@@ -44,7 +44,7 @@ function Cart() {
                     alt="" />
                     <button
   onClick={() => deleteItemHandler(foodItem)}
-  className="inline-flex items-center gap-2 h-7 px-3 rounded-full dark:bg-gray-900 text-white text-sm font-medium hover:bg-black transition self-center"
+  className="inline-flex items-center gap-2 h-7 px-3 rounded-full bg-gray-900 text-white text-sm font-medium hover:bg-black transition self-center"
 >
   <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" viewBox="0 0 16 16" fill="currentColor">
     <svg
