@@ -10,10 +10,17 @@ export default defineConfig({
   ],
   server: {
     proxy: {
-      "/api": {
-        target: "https://www.swiggy.com/dapi",
-        changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api/, ""), 
+      // Proxy for the first API (restaurant list)
+      "/api/restaurants/list/v5": {
+        target: "https://www.swiggy.com/dapi",  // Target the base URL
+        changeOrigin: true,  // For cross-origin requests
+        rewrite: (path) => path.replace(/^\/api/, ""), // Remove '/api' from path
+      },
+      // Proxy for the second API (menu)
+      "/api/menu/pl": {
+        target: "https://www.swiggy.com/dapi",  // Target the base URL
+        changeOrigin: true,  // For cross-origin requests
+        rewrite: (path) => path.replace(/^\/api/, ""), // Remove '/api' from path
       },
     },
   },
